@@ -45,8 +45,6 @@ public class Vehicle {
 		System.out.println("Make Year: " + makeYear);
 		System.out.println("Total Kilometers Travelled: " + journey.getKilometers());
 		System.out.println("Total Services: " + journey.getTotalServices());
-		System.out.println("Fuel Economy " + fuelPurchase.getFuelEconomy());
-		
 	}
 
 	/**
