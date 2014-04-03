@@ -6,8 +6,9 @@ public class Vehicle {
 
 	private Journey			journey;
 	
-	@SuppressWarnings("unused")
+	/**@SuppressWarnings("unused") "this line was commented out because the fuel purchases was added in the prompt"*/
 	private FuelPurchase	fuelPurchase;
+	
 
 	/**
 	 * Class constructor
