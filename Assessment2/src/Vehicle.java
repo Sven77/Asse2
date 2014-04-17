@@ -1,4 +1,6 @@
 
+
+
 public class Vehicle {
 	private String			manufacturer;
 	private String			model;
@@ -6,8 +8,12 @@ public class Vehicle {
 
 	private Journey			journey;
 	
-	@SuppressWarnings("unused")
+	String strFuelPurchase;
+	
+	/**@SuppressWarnings("unused") "this line was commented out because the fuel purchases was added in the prompt"*/
 	private FuelPurchase	fuelPurchase;
+
+	private Service			service;
 
 	/**
 	 * Class constructor
@@ -18,6 +24,8 @@ public class Vehicle {
 		this.makeYear = 2014;
 		journey = new Journey();
 		fuelPurchase = new FuelPurchase(125.6);
+		service = new Service();
+
 	}
 
 	/**
@@ -34,6 +42,7 @@ public class Vehicle {
 		this.makeYear = makeYear;
 		journey = new Journey();
 		fuelPurchase = new FuelPurchase(125.6);
+		service = new Service();
 	}
 
 	/**
@@ -45,8 +54,23 @@ public class Vehicle {
 		System.out.println("Make Year: " + makeYear);
 		System.out.println("Total Kilometers Travelled: " + journey.getKilometers());
 		System.out.println("Total Services: " + journey.getTotalServices());
+		System.out.println("Fuel Economy " + fuelPurchase.getFuelEconomy());
+		service.ServiceDue(journey.getKilometers(), journey.getTotalServices());
+		
+
+		
 	}
 
+	public void printDetails1() {
+		System.out.println("Manufacturer: " + manufacturer);
+		System.out.println("Model: " + model);
+		System.out.println("Make Year: " + makeYear);
+		System.out.println("Total Kilometers Travelled: " + journey.getKilometers());
+		System.out.println("Total Services: " + journey.getTotalServices());
+		System.out.println("Fuel Economy " + fuelPurchase.getFuelEconomy());
+		service.ServiceDue(journey.getKilometers(), journey.getTotalServices());
+		
+	}
 	/**
 	 * Appends the distance parameter to {@link Journey#getKilometers()}
 	 * 
