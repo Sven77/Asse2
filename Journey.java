@@ -6,6 +6,10 @@ public class Journey {
 	/**
 	 * Class constructor
 	 */
+	
+	
+	
+	
 	public Journey() {
 		this.kilometers = 0;
 	}
